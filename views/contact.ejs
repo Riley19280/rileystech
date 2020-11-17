@@ -1,0 +1,50 @@
+<html>
+<%- include('sections/head', { title: 'Contact' }); -%>
+<body class="bg-brand">
+    <img src="assets/image/background-3.jpg" class="object-cover h-screen w-screen absolute top-0 left-0 -z-100">
+    <div class="h-full w-full flex-col md:flex-row flex overflow-scroll">
+        <%- include('sections/navigation'); -%>
+        <div class="flex-1">
+            <div class="w-full md:w-3/4 lg:w-1/2 mt-8 md:mt-20 mx-auto p-2 relative">
+                <div class="w-full bg-offGray-400 rounded-lg shadow-lg border border-offGray-100 relative">
+
+                    <div id="errors" class="p-4 text-red-500 hidden">
+                        <span class="font-bold">The following errors have occurred:</span>
+                    </div>
+
+                    <form method="post" action="https://eyxvvo5rsa.execute-api.us-east-1.amazonaws.com/contact">
+                        <div class="p-4 pb-0">
+                            <label class="block">
+                                <span class="text-gray-200">Name</span>
+                                <input name="name" type="text" class="form-input mt-1 block w-full" placeholder="John Smith" required>
+                            </label>
+                        </div>
+                        <div class="p-4 pb-0">
+                            <label class="block">
+                                <span class="text-gray-200">Email</span>
+                                <input name="email" type="email" class="form-input mt-1 block w-full" placeholder="john@example.com" required>
+                            </label>
+                        </div>
+                        <div class="p-4 pb-0">
+                            <label class="block">
+                                <span class="text-gray-200">Message</span>
+                                <textarea name="message" class="form-textarea mt-1 block w-full" rows="5" placeholder="Hey there!" required></textarea>
+                            </label>
+                        </div>
+                        <div class="text-right p-4 pb-0">
+                            <button type="submit" class="font-bold border-offGray-100 hover:border-gray-400 bg-of hover:bg-offGray-900 text-gray-400 border h-10 px-3 rounded-md transform hover:scale-110 duration-200">
+                                Finish
+                            </button>
+                        </div>
+                    </form>
+                    <div id="thanks" class="absolute h-full w-full top-0 mx-auto my-auto flex justify-center hidden">
+                        <div class="p-2 my-auto font-bold text-lg text-center text-gray-200">
+                            Thanks! <br> Look for a response soon!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

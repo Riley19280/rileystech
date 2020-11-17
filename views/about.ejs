@@ -1,0 +1,76 @@
+<html>
+<%- include('sections/head', { title: 'About' }); -%>
+<body class="bg-brand">
+    <img src="assets/image/background-3.jpg" class="object-cover h-screen w-screen absolute top-0 left-0 -z-100">
+    <div class="h-full w-full flex-col md:flex-row flex overflow-scroll">
+        <%- include('sections/navigation'); -%>
+        <div class="flex-1 overflow-scroll">
+            <div class="w-full md:w-3/4 mt-4 md:mt-8 mx-auto p-2 relative">
+                <div class="w-full bg-offGray-400 rounded-lg shadow-lg border border-offGray-100 text-white p-4 tracking-wider">
+                    <h2 class="text-lg font-bold tracking-wider border-brand border-b-2 mb-1">In Short:</h2>
+                    <p class="text-md mb-2 ml-4">
+                        I'm Riley, a full stack developer with 7+ years of experience.
+                        I taught myself a lot of the concepts, but have a M.S. and B.S. in Computer Science from the University of North Carolina at Charlotte.
+                        I'm well versed in many technologies, as I have built and deployed many of my own mobile apps and websites.
+                    </p>
+                    <h2 class="text-lg font-bold tracking-wider border-brand border-b-2 mt-2 mb-1">My History:</h2>
+                    <div class="text-md mb-2 ml-4 text-justify">
+                        <p>
+                        I have been programming for around 7 years, long before I started any formal education.
+                        I started out wondering how I could add content to my favorite video game, which was Minecraft at the time.
+                        I wrote a mod for the game in java <button id="history-read-more" class="ml-auto text-lg tracking-widest uppercase hover:underline float-right">Read More <span class="text-blue-500" >➤</span></button>
+                        <span id="history-more" class="hidden"> (it didnt do much but it was my first code ever), and from there I was hooked.
+                        When I started high school, I wanted to take programming classes, but there wasn't a lot available at my school.
+                        I ended up transferring to the career technical education school in my county where I was able to take more advanced classes.
+                        Throughout my time in school, I was always looking for ways that I could put my talents to use.
+                        During those years, I created many applications that would allow me to complete my homework faster.
+                        Instead of having to look up the definitions of words, and find synonyms and antonyms.
+                        I created software where you could just type in all of the words, and the software would go and search google, and find all of thee information for you.
+                        With the extra time that I had, I developed video game bots (Runescape, anyone?).
+                        They were nothing complex, just scripts that would click on the screen and perform specified actions over and over.
+                        Eventually I moved on to larger projects, developing android apps.
+                        I created an app for a local club that would allow its users to post about the good deeds they were doing around the community, and give each other a little bit of encouragement for doing it.
+                        I also developed a few games during this time, that were all published on the google play store.
+                        Some time later I ported them to other platforms.
+                        Along the way I decided that I wanted to create my own website.
+                        I wanted full control over everything, so Wordpress or Wix was out of the question.
+                        I deployed my own servers using AWS infrastructure, experimenting with different operating systems and configurations over the years.
+                        Nowadays, I run a linux box with many Docker containers and a MySql database.
+                        Each of my applications runs in its own container, perfect to use any technology that I would like.
+                        <br>When I started college at the University of North Carolina at Charlotte, it was a breeze. The programming classes taught me almost nothing, as I had already learned all of basics and intermediates.
+                        In the following years, the classes got a little harder, the concepts more abstract, and the information was about things that would actually be helpful to me outside of class.
+                        I started my job as an application developer there, working as part of a small group to support a large variety of applications.
+                        In my time there I worked on many different things and managed a few projects of my own.
+                        It was great to have during college that was also in the field that I wanted to work in.
+                        I graduated with a B.S. in computer science in August of 2020, getting my degree in only 3 years.
+                        In my senior year of college, I also enrolled in the early entry program for graduate school, allowing me to work on both my B.S. and M.S. degrees at the same time.
+                        This was an incredible opportunity, as it meant that I could finish my Masters degree at the end of 2020 as well.
+                        It was a lot of work, but finishing both degrees within 6 months of each other is an amazing accomplishment.
+                        From here, I plan to go into the workforce, to work on bigger and better things, bringing with me all the experiences and knowledge I have gained so far.
+                        </span>
+                        </p>
+                    </div>
+                    <h2 class="text-lg font-bold tracking-wider border-brand border-b-2 mt-2 mb-1">Education:</h2>
+                    <p class="text-md mb-2 ml-4">
+                        I have earned 2 degrees thus far, both from the University of North Carolina at Charlotte.
+                    </p>
+                    <ul class="ml-8 list-disc">
+                        <li>Masters of Science in Computer Science (GPA 3.8), 2020</li>
+                        <li>Bachelors of Science in Computer Science (GPA 3.6), 2020</li>
+                    </ul>
+
+                    <h2 class="text-lg font-bold tracking-wider border-brand border-b-2 mt-2 mb-1">Microsoft Technology Associate Certifications:</h2>
+                    <ul class="ml-4">
+                        <li>98-349: MTA: Windows® Operating System Fundamentals</li>
+                        <li>98-364: MTA: Database Fundamentals</li>
+                        <li>98-366: MTA: Networking Fundamentals</li>
+                        <li>98-367: MTA: Security Fundamentals</li>
+                        <li>98-368: MTA: Mobility and Device Fundamentals</li>
+                        <li>98-374: MTA: Gaming Development Fundamentals (C#)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
