@@ -7,12 +7,57 @@
         <div class="flex-1 overflow-scroll">
             <div class="flex-1 overflow-scroll">
                 <div class="w-full md:w-3/4 mt-4 md:mt-8 mx-auto p-2 relative">
-                    <div class="w-full bg-offGray-400 rounded-lg shadow-lg border border-offGray-100 text-white p-4 tracking-wider">
-                        <div class="text-2xl font-bold mx-auto">Coming Soon.</div>
+                    <div id="projects" class="flex flex-wrap">
+                        <%for( let project of projects) {%>
+<!--                        <span class="font-bold border-offGray-100 hover:border-gray-400 bg-of hover:bg-offGray-900 text-gray-400 border h-10 px-3 rounded-md transform hover:scale-110 duration-200"></span>-->
+                        <div class="inline-block w-full md:w-1/2 p-2">
+                            <a href="#<%- project.name.toLowerCase().replace(/ /g, '-') %>" class="block bg-offGray-400 rounded-lg shadow-lg border border-offGray-100 text-white p-4 tracking-wider hover:bg-offGray-900 hover:border-gray-400 cursor-pointer">
+                                <p class="font-bold"><%- project.name %></p>
+                                <p class=""> <%-project.tagline%></p>
+                            </a>
+                        </div>
+                        <%}%>
+                    </div>
+                    <div id="details" class="block bg-offGray-400 rounded-lg shadow-lg border border-offGray-100 text-white p-4 m-2 hidden">
+                        <%for( let project of projects) {%>
+                        <div id="<%- project.name.toLowerCase().replace(/ /g, '-') %>" class="hidden p-2">
+
+
+                            <div class="flex mb-2 md:mb-4">
+                                <div class="flex-1">
+                                    <a href="#" class="hover:underline"><span class="inline-block text-blue-500 transform rotate-180 mr-1 text-lg">➤</span>Back</a>
+                                </div>
+                                <div class="text-center font-bold"><%- project.name %></div>
+                                <div class="flex-1">&nbsp;</div>
+                            </div>
+
+
+                            <p class="text-base"><%- project.description %></p>
+                        </div>
+                        <%}%>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        on_hash_change()
+
+        function on_hash_change() {
+            if(window.location.hash === '' || window.location.hash === '#') {
+                $('#projects').show()
+                $('#details').hide()
+                $('#details').children().hide()
+            } else {
+                $('#projects').hide()
+                $('#details').show()
+                $(`${window.location.hash}`).show()
+            }
+        }
+
+        window.onhashchange = function () {
+            on_hash_change()
+        }
+    </script>
 </body>
 </html>

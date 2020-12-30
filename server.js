@@ -41,7 +41,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/projects', (req, res) => {
-    res.render('projects', {})
+    res.render('projects', { projects: fs.readJsonSync('./projects.json') })
 })
 
 app.get('/about', (req, res) => {

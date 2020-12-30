@@ -14,7 +14,7 @@ const s3 = new AWS.S3({
 });
 
 function ejs2html(loc) {
-    ejs.renderFile(loc, {}, {}, function(err, str){
+    ejs.renderFile(loc, { projects: fs.readJsonSync('./projects.json') }, {}, function(err, str){
         if(err)
             console.error(err)
         let save = path.join(__dirname, 'dist', loc.replace('.ejs', '.html'))
