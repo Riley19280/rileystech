@@ -1,0 +1,30 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.menu-item-current {
+    padding-bottom: calc(1rem - 3px);
+    border-bottom: 3px solid theme('colors.grey.700');
+}
+body {
+    background: linear-gradient(45deg, theme('colors.blue.300'), theme('colors.blue.500'));
+    background-attachment:fixed;
+    font-family: 'Lato', sans-serif !important;
+}
+
+.loader {
+    border: 4px solid theme('colors.grey.300');
+    border-top: 4px solid theme('colors.blue-300');
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 2s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
