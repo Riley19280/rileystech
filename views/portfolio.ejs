@@ -1,0 +1,48 @@
+<html>
+<%- include('sections/head', { title: 'Portfolio' }); -%>
+<body class="bg-brand">
+    <img src="/assets/image/background-3.jpg" class="object-cover h-screen w-screen absolute top-0 left-0 -z-100">
+    <div class="h-full w-full flex-col md:flex-row flex overflow-auto">
+        <%- include('sections/navigation'); -%>
+        <div class="flex-1">
+            <div class="w-full md:w-3/4 mt-4 md:mt-8 mx-auto p-2 relative">
+
+                <div class="block bg-offGray-400 rounded-lg shadow-lg border border-offGray-100 text-white p-4 tracking-wider">
+                    <h2 class="text-4xl md:text-6xl font-bold tracking-wider border-brand border-b-2 ml-8 inline-block">My Portfolio</h2>
+                    <p class="ml-8 text-2xl">A curated list of my best projects!</p>
+
+                    <div id="portfolio" class="flex flex-wrap mt-8">
+                        <div class="inline-block w-full p-2">
+                            <a href="/portfolio/hololens" class="block bg-gray-900 rounded-lg shadow-lg border border-offGray-100 text-white p-4 tracking-wider hover:bg-gray-800 hover:border-gray-400 cursor-pointer">
+                                <p class="font-bold">Hololens Cognitive Analysis</p>
+                                <p class="">Process and analyze hololens and brain oxygen data to determine cognitive load</p>
+                            </a>
+                        </div>
+
+                        <div class="inline-block w-full p-2">
+                            <a href="/portfolio/gurpay" class="block bg-gray-900 rounded-lg shadow-lg border border-offGray-100 text-white p-4 tracking-wider hover:bg-gray-800 hover:border-gray-400 cursor-pointer">
+                                <p class="font-bold">Gurpay</p>
+                                <p class="">Cross platform iOS & android that allows roommates to manage and split bills</p>
+                            </a>
+                        </div>
+
+<!--                        <div class="inline-block w-full p-2">-->
+<!--                            <a href="/portfolio/game-tracking" class="block bg-gray-900 rounded-lg shadow-lg border border-offGray-100 text-white p-4 tracking-wider hover:bg-gray-800 hover:border-gray-400 cursor-pointer">-->
+<!--                                <p class="font-bold">Game price tracking system</p>-->
+<!--                                <p class="">A software suite with that automates the buying and selling of games for a profit</p>-->
+<!--                            </a>-->
+<!--                        </div>-->
+                    </div>
+
+                </div>
+
+                <a href="/projects" class="block bg-offGray-400 rounded-lg shadow-lg border border-offGray-100 text-white p-4 tracking-wider hover:bg-offGray-900 hover:border-gray-400 cursor-pointer mt-8">
+                    <p class="text-lg tracking-widest ml-4">View a complete list of all my projects <span class="text-blue-500" >➤</span></p>
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -52,6 +52,23 @@ app.get('/contact', (req, res) => {
     res.render('contact', {})
 })
 
+app.get('/portfolio', (req, res) => {
+    res.render('portfolio', {})
+})
+
+app.get('/portfolio/gurpay', (req, res) => {
+    res.render('portfolio/gurpay', {})
+})
+
+app.get('/portfolio/hololens', (req, res) => {
+    res.render('portfolio/hololens', {})
+})
+
+app.get('/portfolio/game-tracking', (req, res) => {
+    res.render('portfolio/game-tracking', {})
+})
+
+
 
 app.get('/error', (req, res) => {
     res.render('error', {})
