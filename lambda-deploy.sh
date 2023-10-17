@@ -8,10 +8,8 @@ if [ "$2" = 'install' ]; then
   cd lambda/$1/
   npm install
   cd ../..
-  rm ./lambda/$1/package-lock.json
+  rm ./lambda/$1/yarn.lock
 fi
-
-cp database.js ./lambda/$1/database.js
 
 cd lambda/$1/
 zip -r ../$1.zip *

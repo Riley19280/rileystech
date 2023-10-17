@@ -1,0 +1,36 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        id: setup-node
+        with:
+          node-version: 16
+          cache: "yarn"
+
+      - name: Setup .env
+        run: |
+          echo AWS_ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY }} >> .env
+          echo AWS_SECRET=${{ secrets.AWS_SECRET }} >> .env
+
+      - name: Install Dependencies
+        run: |
+          yarn install
+
+      - name: Build
+        run: |
+          yarn deploy

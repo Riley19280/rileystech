@@ -7,10 +7,10 @@ let ejs = require('ejs');
 const path = require('path')
 const child_process = require('child_process')
 const AWS = require('aws-sdk');
-const BUCKET_NAME = process.env.BUILD_BUCKET;
+const BUCKET_NAME = 'rileystech.com';
 const s3 = new AWS.S3({
-    accessKeyId: process.env.BUILD_AWS_ACCESS_KEY,
-    secretAccessKey: process.env.BUILD_AWS_SECRET
+    accessKeyId: process.env.AWS_ACCESS_KEY,
+    secretAccessKey: process.env.AWS_SECRET
 });
 
 function ejs2html(loc) {
@@ -110,5 +110,3 @@ const uploadFileAWS = (loc, filename, params) => {
     }
 
 })();
-
-
